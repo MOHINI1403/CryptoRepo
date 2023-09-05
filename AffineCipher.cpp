@@ -3,6 +3,8 @@ using namespace std;
 
 int m=26;
 //If the key multiplicative inverse for a exists then only encryption possible
+
+
 string encryptMessage(string str,int a,int b){
     //Step1:Perform multiplication with key a
     //Step 2: Then perform addition
@@ -74,6 +76,7 @@ string Decryption(string cipher,int a,int b){
     }
 
   }
+//Do Multiplicative Inverse
   string decryptMsg="";
   int a_inv=modInverse(a,m);
 
@@ -89,7 +92,7 @@ string Decryption(string cipher,int a,int b){
   return decryptMsg;
 }
 
-
+/*This Function checks that in case of A=b(modN) gcd(a,N) is 1 that is the number is co-prime*/
 bool isPossible(int a){
     int gcd=1;
     for(int ind=2;ind<=a;ind++){
