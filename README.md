@@ -57,7 +57,78 @@
       * If neither of the above rules is true: Form a rectangle with the two letters and take the letters on the horizontal opposite corner of the rectangle.
 
   ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20190818175428/encryption-of-instruments.png)
+## Affine Cipher
+  ### Encryption:
+   * E(x)=(ax+b)mod(n):
+   * Here a and b are the key values and n here is 26 . For the Affine Cipher to be performed a and n should be co-prime
+  ### Decryption:
+  * D(c)=a^-1(c-b)mod(n)
+  * here a and b are same key values n here is 26.a^-1 is the mulitplicative inverse of a and n
 
+
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/affin-cipher.png)
+
+
+## AutoKey Cipher
+ This Cipher is Polyalphabetic Subsitution Cipher which is closely related to Vigenere Cipher but uses differnt method to generate their key
+
+    Plaintext = "HELLO"
+    Autokey = N
+    Ciphertext = "ULPWZ"
+
+
+Given plain text is : H E L L O
+Key is              : N H E L L
+
+Let's encrypt:
+
+Plain Text(P)       : H   E   L   L   O
+Corresponding Number: 7   4   11  11  14     
+Key(K)              : N   H   E   L   L
+Corresponding Number: 13  7   4   11  11      
+                    ---------------------
+Applying the formula: 20  11  15  22  25  
+
+Corresponding 
+Letters are         : U    L   P   W   Z
+
+Hence Ciphertext is: ULPWZ
+
+Let's decrypt:
+
+Cipher Text(C)      : U   L   P   W   Z
+Key(K)              : N   H   E   L   L
+                    ---------------------
+Applying the formula: H   E   L   L   O
+
+Hence Plaintext is: HELLO 
+
+
+## Vernam Cipher :
+Hilbert Vernam
+### Encryption Method:
+  * Assign the number to each character in the key and the plain Text
+  * Perform XOR operation on every key plain text character pair and obatin the resultant value
+  * If the resultant value is less than 26 replace the character correspoding to that value as it is else subtract the obtained number from 26 and then convert it into the desired character
+  * This reuslts in the formation of a Cipher Text
+
+
+       PlainText : O A K
+                 : 14 0 10
+       Key       : S O N
+                 : 18 14 13
+
+    Corresponding to every character perform XOR operation :
+
+         XOR of O^S=2=>C
+         XOR of A^O=14=>O
+         XOR of K^N=7=>H
+    Cipher Text: COH
+
+### Decryption Method:
+  * During Decryption the Key and Cipher Text both are provided to the user the user is only supposed to perform the subtraction of cipherText with the Given Key
+    
 
 
   
