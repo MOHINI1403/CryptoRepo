@@ -130,7 +130,8 @@ Hilbert Vernam
   * During Decryption the Key and Cipher Text both are provided to the user the user is only supposed to perform the subtraction of cipherText with the Given Key
     
 
-
+## DES Algorithm:
+![alt text](https://www.researchgate.net/profile/Marcelo-Lubaszewski/publication/220850878/figure/fig1/AS:394010326781952@1470950790085/Block-diagram-of-DES-algorithm.png)
   
   
     
