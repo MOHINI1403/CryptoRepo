@@ -133,7 +133,21 @@ Hilbert Vernam
 ## DES Algorithm:
 ![alt text](https://www.researchgate.net/profile/Marcelo-Lubaszewski/publication/220850878/figure/fig1/AS:394010326781952@1470950790085/Block-diagram-of-DES-algorithm.png)
   
-  
+## AES Algorithm:
+     The Block Cipher Symmetric Encryption Technique.
+   ### Steps:
+![alt txt](https://i.ytimg.com/vi/14SAn4IEAHk/maxresdefault.jpg)
+
+### Key Expansion:
+     Round Keys are derived from the Cipher keys using the "Rijndael's Key" Schedule
+### Initial Round:
+     Add RoundKey:Each byte of the state is combined with roundKey or bitwise XOR
+### Rounds:
+     Every Round Consists of these four steps except the final Round
+     >Sub Bytes:non linear subsitution Step
+     >Shift Rows:transportation step
+     >MixColumns:mixing operation of each column
+     >AddRoundKey
     
  
         
